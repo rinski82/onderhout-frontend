@@ -13,10 +13,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { ViewsComponent } from './views/views.component';
+import { ViewComponent } from './view/view.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { MapComponent } from './map/map.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -28,8 +30,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     DashboardComponent,
     TodoDetailComponent,
     MessagesComponent,
-    ViewsComponent,
-    CalendarComponent,
+    ViewComponent,
     MapComponent,
     UserDetailComponent
   ],
@@ -37,7 +38,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+   // MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

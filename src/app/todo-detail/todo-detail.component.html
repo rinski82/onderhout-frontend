@@ -13,10 +13,8 @@
       <td><label for="todo-priority">Prioriteit: </label></td>
       <td>
         <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
-        <option value="Hoog">Hoog</option>
-        <option value="Midden">Midden</option>
-        <option value="Laag">Laag</option>
-      </select>
+          <option *ngFor="let prio of priosArray" [value]="prio[0]">{{prio[0]}}</option>
+        </select>
     </td>
     </tr>
     <tr>

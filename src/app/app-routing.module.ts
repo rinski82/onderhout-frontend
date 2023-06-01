@@ -8,7 +8,7 @@ import {UserFormComponent} from "./user-form/user-form.component";
 import {TodoDetailComponent} from "./todo-detail/todo-detail.component";
 import {UserDetailComponent} from "./user-detail/user-detail.component";
 import {MessagesComponent} from "./messages/messages.component";
-import {ViewsComponent} from "./views/views.component";
+import {ViewComponent} from "./view/view.component";
 import {MapComponent} from "./map/map.component";
 import {CalendarComponent} from "./calendar/calendar.component";
 
@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'user/add', component: UserFormComponent },
   { path: 'user/:id', component: UserFormComponent },
   { path: 'user-detail/:id', component: UserDetailComponent },
-  { path: 'views', component: ViewsComponent },
+  { path: 'view', component: ViewComponent },
+  { path: 'view/:selected', component: ViewComponent },
   { path: 'map', component: MapComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'messages', component: MessagesComponent }

@@ -1,0 +1,8 @@
+div.dashboard-item {
+  background-color: green;
+  margin: 3px;
+  padding: 3px;
+  color: white;
+  font-family: verdana;
+  font-size: 20px;
+}

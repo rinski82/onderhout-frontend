@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Todo} from "./todo";
 import {MessageService} from "./message.service";
+// @ts-ignore
+import {EnumLayout, priorityEnum} from "./enums.ts"
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +30,9 @@ export class TodoService {
     this.messageService.add('TodoService: fetched todo: ' + id);
     return this.http.get<Todo[]>(
       'http://localhost:8080/todo/' + id);
+  }
+
+  getPriorityEnum() {
+    return priorityEnum;
   }
 }
