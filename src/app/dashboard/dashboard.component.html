@@ -1,0 +1,4 @@
+<h2>dashboard</h2>
+<div class="todos-menu">
+  <div *ngFor="let todo of todos" routerLink="/todo-detail/{{todo.id}}">{{todo.task}}({{todo.owner}})</div>
+</div>

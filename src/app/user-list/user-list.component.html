@@ -1,0 +1,23 @@
+<div><h2>users <button routerLink="/user/add">+</button> </h2>
+<table>
+  <tr>
+    <td>OPEN</td>
+    <td>ID</td>
+    <td>USERNAME</td>
+    <td>PASSWORD</td>
+    <td>EMAILADRES</td>
+    <td>FULLNAME</td>
+    <td>INITIALS</td>
+    <td>DEL</td>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td><button routerLink="/user-detail/{{user.id}}">o</button></td>
+    <td>{{user.id}}</td>
+    <td>{{user.username}}</td>
+    <td>***</td>
+    <td>{{user.emailadres}}</td>
+    <td>{{user.fullname}}</td>
+    <td>{{user.initials}}</td>
+    <td><button (click)="delete(user.id)">-</button></td>
+  </tr>
+</table>

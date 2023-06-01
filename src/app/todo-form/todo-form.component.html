@@ -1,0 +1,66 @@
+<div>
+  <h2>todo form</h2>
+  <table>
+    <tr>
+      <td></td>
+      <td><input type="text" [(ngModel)]="todo.task" name="task" placeholder="task"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <select [(ngModel)]="todo.category" name="category">
+          <option value="Huis" [selected]>Huis</option>
+          <option value="Tuin">Tuin</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Kantoor">Kantoor</option>
+          <option value="Schuur">Schuur</option>
+          <option value="Tunnelkas">Tunnelkas</option>
+          <option value="Groentetuin">Groentetuin</option>
+          <option value="Bonustuin">Bonustuin</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
+          <option value="Hoog">Hoog</option>
+          <option value="Midden">Midden</option>
+          <option value="Laag">Laag</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="text" [(ngModel)]="todo.owner" name="owner" placeholder="owner"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="text" [(ngModel)]="todo.due" name="due" placeholder="due"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="text" [(ngModel)]="todo.locationxy" name="locationxy" placeholder="locationxy"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><select [(ngModel)]="todo.status" name="status">
+        <option value="Nieuw">Nieuw</option>
+        <option value="Gepland">Gepland</option>
+        <option value="Bezig">Bezig</option>
+        <option value="Gepauzeerd">Gepauzeerd</option>
+        <option value="Gedaan">Gedaan</option>
+        <option value="Gearchiveerd">Gearchiveerd</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="text" [(ngModel)]="todo.description" name="description" placeholder="description (optional)"></td>
+    </tr>
+    <tr>
+    <tr>
+    <td></td>
+    <td><button (click)="add()">Add</button></td>
+    </tr>
+  </table>
+</div>

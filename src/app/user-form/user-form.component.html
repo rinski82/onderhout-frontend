@@ -1,0 +1,33 @@
+<div>
+  <h2>user form</h2>
+  <table>
+    <tr>
+      <td><label for="todo-id">id: </label></td>
+      <td><input type="text" [(ngModel)]="user.id" name="id" placeholder="id"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-username">Gebruikersnaam: </label></td>
+      <td><input type="text" [(ngModel)]="user.username" name="username" placeholder="username"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-password">Wachtwoord: </label></td>
+      <td><input type="text" [(ngModel)]="user.password" name="password" placeholder="password"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-initials">Emailadres: </label></td>
+      <td><input type="text" [(ngModel)]="user.emailadres" name="emailadres" placeholder="emailadres"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-fullname">Naam: </label></td>
+      <td><input type="text" [(ngModel)]="user.fullname" name="fullname" placeholder="fullname"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-initials">Initialen: </label></td>
+      <td><input type="text" [(ngModel)]="user.initials" name="initials" placeholder="initials"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="add()">Add</button></td>
+    </tr>
+  </table>
+</div>

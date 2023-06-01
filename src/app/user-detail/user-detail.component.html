@@ -1,0 +1,33 @@
+<div *ngIf="user">
+  <h2>{{user.username | uppercase}}</h2>
+  <table>
+    <tr>
+      <td><label for="todo-id">id: </label></td>
+      <td><input id="todo-id" [(ngModel)]="user.id" placeholder="id"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-username">Gebruikersnaam: </label></td>
+      <td><input id="todo-username" [(ngModel)]="user.username" placeholder="username"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-password">Wachtwoord: </label>
+      <td><input id="todo-password" [(ngModel)]="user.password" placeholder="password"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-emailadres">Emailadres: </label>
+      <td><input id="todo-emailadres" [(ngModel)]="user.emailadres" placeholder="emailadres"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-fullname">Naam: </label>
+      <td><input id="todo-fullname" [(ngModel)]="user.fullname" placeholder="fullname"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-initials">Initialen: </label>
+      <td><input id="todo-initials" [(ngModel)]="user.initials" placeholder="initials"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="save()">Save</button></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,71 @@
+<div *ngIf="todo">
+  <h2>{{todo.task | uppercase}}</h2>
+  <table>
+    <tr>
+      <td><label for="todo-id">id: </label></td>
+      <td><input id="todo-id" [(ngModel)]="todo.id" placeholder="id"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-task">Taak: </label></td>
+      <td><input id="todo-task" [(ngModel)]="todo.task" placeholder="task"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-priority">Prioriteit: </label></td>
+      <td>
+        <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
+        <option value="Hoog">Hoog</option>
+        <option value="Midden">Midden</option>
+        <option value="Laag">Laag</option>
+      </select>
+    </td>
+    </tr>
+    <tr>
+      <td><label for="todo-category">Categorie: </label></td>
+      <td>
+        <select [(ngModel)]="todo.category" name="category">
+          <option value="Huis" [selected]>Huis</option>
+          <option value="Tuin">Tuin</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Kantoor">Kantoor</option>
+          <option value="Schuur">Schuur</option>
+          <option value="Tunnelkas">Tunnelkas</option>
+          <option value="Groentetuin">Groentetuin</option>
+          <option value="Bonustuin">Bonustuin</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="todo-owner">Eigenaar: </label></td>
+      <td><input id="todo-owner" [(ngModel)]="todo.owner" placeholder="owner"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-locationxy">Locatie X/Y: </label></td>
+      <td><input id="todo-locationxy" [(ngModel)]="todo.locationxy" placeholder="locationxy"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-due">Einddatum: </label></td>
+      <td><input id="todo-due" [(ngModel)]="todo.due" placeholder="due"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-status">Status: </label></td>
+      <td>
+        <select [(ngModel)]="todo.status" name="status">
+        <option value="Nieuw">Nieuw</option>
+        <option value="Gepland">Gepland</option>
+        <option value="Bezig">Bezig</option>
+        <option value="Gepauzeerd">Gepauzeerd</option>
+        <option value="Gedaan">Gedaan</option>
+        <option value="Gearchiveerd">Gearchiveerd</option>
+      </select>
+    </td>
+    </tr>
+    <tr>
+      <td><label for="todo-description">Omschrijving: </label></td>
+      <td><input id="todo-description" [(ngModel)]="todo.description" placeholder="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="save()">Save</button></td>
+    </tr>
+  </table>
+</div>
