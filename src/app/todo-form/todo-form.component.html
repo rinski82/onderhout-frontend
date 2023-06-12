@@ -7,14 +7,22 @@
     </tr>
     <tr>
       <td></td>
+      <td><input type="checkbox" [(ngModel)]="todo.plannedtype" name="plannedtype" placeholder="plannedtype"></td>
+    </tr>
+    <tr>
+    <tr>
+      <td></td>
       <td>
-        <select [(ngModel)]="todo.category" name="category">
-          <option value="Huis" [selected]>Huis</option>
+        <select [(ngModel)]="todo.context" name="context">
+          <option value=""></option>
+          <option value="Huis">Huis</option>
           <option value="Tuin">Tuin</option>
           <option value="Keuken">Keuken</option>
           <option value="Kantoor">Kantoor</option>
+          <option value="Administratie">Administratie</option>
+          <option value="Werk">Werk</option>
           <option value="Schuur">Schuur</option>
-          <option value="Tunnelkas">Tunnelkas</option>
+          <option value="Kas">Tunnelkas</option>
           <option value="Groentetuin">Groentetuin</option>
           <option value="Bonustuin">Bonustuin</option>
         </select>
@@ -24,9 +32,8 @@
       <td></td>
       <td>
         <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
-          <option value="Hoog">Hoog</option>
-          <option value="Midden">Midden</option>
-          <option value="Laag">Laag</option>
+          <option value=""></option>
+          <option *ngFor="let prio of priosArray" [value]="prio[0][0]">{{prio[0][0]}}</option>
         </select>
       </td>
     </tr>
@@ -36,7 +43,7 @@
     </tr>
     <tr>
       <td></td>
-      <td><input type="text" [(ngModel)]="todo.due" name="due" placeholder="due"></td>
+      <td><input type="text" [(ngModel)]="todo.duedate" name="duedate" placeholder="duedate"></td>
     </tr>
     <tr>
       <td></td>
@@ -45,6 +52,7 @@
     <tr>
       <td></td>
       <td><select [(ngModel)]="todo.status" name="status">
+        <option value=""></option>
         <option value="Nieuw">Nieuw</option>
         <option value="Gepland">Gepland</option>
         <option value="Bezig">Bezig</option>

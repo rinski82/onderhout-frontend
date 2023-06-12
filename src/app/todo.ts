@@ -1,12 +1,13 @@
 export class Todo {
   id: number = 0;
   task: string = "";
-  category: string = "";
+  context: string = "";
   priority: string = "";
   owner: string = "";
-  due: string = "";
+  duedate!: Date;
   locationxy: string = "";
   description: string = "";
   status: string = "";
+  plannedtype: boolean = false;
 
 }

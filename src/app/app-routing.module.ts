@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'user/:id', component: UserFormComponent },
   { path: 'user-detail/:id', component: UserDetailComponent },
   { path: 'view', component: ViewComponent },
-  { path: 'view/:selected', component: ViewComponent },
+  { path: 'view/todo', component: ViewComponent },
   { path: 'map', component: MapComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'messages', component: MessagesComponent }

@@ -19,6 +19,7 @@ import { MapComponent } from './map/map.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from "@angular/material/core";
+import {CustomDatePipe} from "./custom.datepipe";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     MessagesComponent,
     ViewComponent,
     MapComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,

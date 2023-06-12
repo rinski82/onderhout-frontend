@@ -36,8 +36,8 @@ export class TodoDetailComponent implements OnInit {
   }
   save() {
     this.todoService.save(this.todo).subscribe(
-      () => this.todoList.getAll()
+      () => this.router.navigate(['/todo'])
     );
-    this.router.navigate(['/todo']);
+
   }
 }

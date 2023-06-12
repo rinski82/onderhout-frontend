@@ -1,10 +1,6 @@
 <h2>calendar</h2>
 
 <mat-card class="demo-inline-calendar-card">
-  <mat-calendar [(selected)]="selected" (click)="openView()"></mat-calendar>
+  <mat-calendar [(selected)]="selected_date" (click)="openView()"></mat-calendar>
 </mat-card>
-<p>Selected date: {{selected}}</p>
-
-<!--https://material.angular.io/components/datepicker/overview#datepicker-inline-calendar-->
-
-<h1>hallo!?</h1>
+<p>Selected date: {{selected_date}}</p>

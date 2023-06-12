@@ -35,4 +35,15 @@ export class TodoService {
   getPriorityEnum() {
     return priorityEnum;
   }
+
+  getByDate(selected_date: Date | null): Observable<Todo[]> {
+    this.messageService.add('TodoService: fetched todos by date: '  + new Date(selected_date!).toLocaleDateString() );
+    return this.http.get<Todo[]>(
+      'http://localhost:8080/todo?duedate=' + new Date(selected_date!).toLocaleDateString() );
+  }
+
+
+  getTodosByDate(selected_date: Date | null): Observable<Todo[]> {
+    return this.http.get<Todo[]>('http://localhost:8080/todo');
+  }
 }
