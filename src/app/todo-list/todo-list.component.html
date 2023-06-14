@@ -1,7 +1,7 @@
 <div><h2>todo <button routerLink="/todo/add">+</button> </h2>
 </div>
 
-<div *ngIf="show_selected_date"><h2>TODOS VOOR: {{selected_date | customDate  }}</h2></div>
+<div *ngIf="show_selected_date"><h2>TODOS VOOR: {{selected_date | customDate}}</h2></div>
 <table>
   <tr>
     <td>OPEN</td>
@@ -10,7 +10,7 @@
     <td>PLANNEDTYPE</td>
     <td>CONTEXT</td>
     <td>PRIORITY</td>
-    <td>OWNER</td>
+    <td>USER</td>
     <td>DUEDATE</td>
     <td>LOCATIONXY</td>
     <td>STATUS</td>
@@ -24,8 +24,8 @@
     <td>{{todo.plannedtype}}</td>
     <td>{{todo.context}}</td>
     <td>{{todo.priority}}</td>
-    <td>{{todo.owner}}</td>
-    <td>{{todo.duedate | customDate }}</td>
+    <td>{{todo.user.fullname}}</td>
+    <td>{{todo.duedate | customDate}}</td>
     <td>{{todo.locationxy}}</td>
     <td>{{todo.status}}</td>
     <td>{{todo.description}}</td>

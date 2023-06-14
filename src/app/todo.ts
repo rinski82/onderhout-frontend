@@ -1,3 +1,5 @@
+import {User} from "./user";
+
 export class Todo {
   id: number = 0;
   task: string = "";
@@ -9,5 +11,6 @@ export class Todo {
   description: string = "";
   status: string = "";
   plannedtype: boolean = false;
+  user: User = new User();
 
 }

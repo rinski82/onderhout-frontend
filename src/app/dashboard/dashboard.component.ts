@@ -10,6 +10,8 @@ import {TodoService} from "../todo.service";
 export class DashboardComponent implements OnInit {
   todos: Todo[] = [];
 
+  piet = 'dashboard-item-critical' // || dashboard-item-critical
+
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {

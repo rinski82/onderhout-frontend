@@ -1,4 +1,4 @@
 <h2>dashboard</h2>
 <div>
-  <div class="dashboard-item" *ngFor="let todo of todos" routerLink="/todo-detail/{{todo.id}}">[{{todo.context}}] {{todo.task | uppercase}} ({{todo.owner}})</div>
+  <div [ngClass]="todo.plannedtype ? 'dashboard-item' : 'dashboard-item-critical'" *ngFor="let todo of todos" routerLink="/todo-detail/{{todo.id}}">[{{todo.context}}] {{todo.task | uppercase}} ({{todo.user.fullname}})</div>
 </div>

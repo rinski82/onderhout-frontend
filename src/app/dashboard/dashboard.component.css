@@ -6,3 +6,12 @@ div.dashboard-item {
   font-family: verdana;
   font-size: 20px;
 }
+
+div.dashboard-item-critical {
+  background-color: red;
+  margin: 3px;
+  padding: 3px;
+  color: white;
+  font-family: verdana;
+  font-size: 20px;
+}

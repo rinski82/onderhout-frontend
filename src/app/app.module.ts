@@ -22,29 +22,32 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {CustomDatePipe} from "./custom.datepipe";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoFormComponent,
-    TodoListComponent,
-    UserFormComponent,
-    UserListComponent,
-    DashboardComponent,
-    TodoDetailComponent,
-    MessagesComponent,
-    ViewComponent,
-    MapComponent,
-    UserDetailComponent,
-    CustomDatePipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    NoopAnimationsModule,
-   // MatNativeDateModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TodoFormComponent,
+        TodoListComponent,
+        UserFormComponent,
+        UserListComponent,
+        DashboardComponent,
+        TodoDetailComponent,
+        MessagesComponent,
+        ViewComponent,
+        MapComponent,
+        UserDetailComponent,
+        CustomDatePipe
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        NoopAnimationsModule,
+        // MatNativeDateModule
+    ],
+    providers: [],
+    exports: [
+        CustomDatePipe
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

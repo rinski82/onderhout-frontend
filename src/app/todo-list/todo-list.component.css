@@ -4,3 +4,16 @@ table {
   border-color: darkgrey;
   width: 100%;
 }
+
+tr.done {
+  background-color: green;
+
+}
+
+tr.open {
+  background-color: yellow;
+}
+
+tr.critical {
+  background-color: red;
+}

@@ -1,17 +1,35 @@
 <div>
   <h2>todo form</h2>
+</div>
+<div *ngIf="todo">
+  <h2>{{todo.task | uppercase}}</h2>
+</div>
+<div>
   <table>
     <tr>
-      <td></td>
-      <td><input type="text" [(ngModel)]="todo.task" name="task" placeholder="task"></td>
+      <td><label for="todo-id">id: </label></td>
+      <td><input id="todo-id" [(ngModel)]="todo.id" placeholder="id" disabled></td>
     </tr>
     <tr>
-      <td></td>
+      <td><label for="todo-task">Taak: </label></td>
+      <td><input id="todo-task" [(ngModel)]="todo.task" name="task" placeholder="task"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-task">Gepland: </label></td>
       <td><input type="checkbox" [(ngModel)]="todo.plannedtype" name="plannedtype" placeholder="plannedtype"></td>
     </tr>
     <tr>
     <tr>
-      <td></td>
+      <td><label for="todo-priority">Prioriteit: </label></td>
+      <td>
+        <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
+          <option value=""></option>
+          <option *ngFor="let prio of priosArray" [value]="prio[0][0]">{{prio[0][0]}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+    <td><label for="todo-category">Context: </label></td>
       <td>
         <select [(ngModel)]="todo.context" name="context">
           <option value=""></option>
@@ -29,29 +47,17 @@
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td>
-        <select [(ngModel)]="todo.priority" name="priority" placeholder="priority">
-          <option value=""></option>
-          <option *ngFor="let prio of priosArray" [value]="prio[0][0]">{{prio[0][0]}}</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input type="text" [(ngModel)]="todo.owner" name="owner" placeholder="owner"></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input type="text" [(ngModel)]="todo.duedate" name="duedate" placeholder="duedate"></td>
-    </tr>
-    <tr>
-      <td></td>
+      <td><label for="todo-locationxy">Locatie X/Y: </label></td>
       <td><input type="text" [(ngModel)]="todo.locationxy" name="locationxy" placeholder="locationxy"></td>
     </tr>
     <tr>
-      <td></td>
-      <td><select [(ngModel)]="todo.status" name="status">
+      <td><label for="todo-duedate">Einddatum: </label></td>
+      <td><input type="text" [(ngModel)]="todo.duedate" name="duedate" placeholder="duedate"></td>
+    </tr>
+    <tr>
+      <td><label for="todo-status">Status: </label></td>
+      <td>
+        <select [(ngModel)]="todo.status" name="status">
         <option value=""></option>
         <option value="Nieuw">Nieuw</option>
         <option value="Gepland">Gepland</option>
@@ -62,13 +68,22 @@
       </select></td>
     </tr>
     <tr>
-      <td></td>
+      <td><label for="todo-description">Omschrijving: </label></td>
       <td><input type="text" [(ngModel)]="todo.description" name="description" placeholder="description (optional)"></td>
     </tr>
     <tr>
     <tr>
+      <td><label for="todo-user">Owner/User: </label></td>
+      <td>
+        <select [(ngModel)]="todo.user.id" id="todo-user" name="user" placeholder="user">
+          <option value=""></option>
+          <option *ngFor="let user of usersList" [ngValue]="user.id" >{{user.username}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
     <td></td>
-    <td><button (click)="add()">Add</button></td>
+    <td><button (click)="cancel()">Cancel</button> <button (click)="add()">Add</button></td>
     </tr>
   </table>
 </div>

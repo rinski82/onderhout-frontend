@@ -1,9 +1,11 @@
 <div *ngIf="todo">
   <h2>{{todo.task | uppercase}}</h2>
+</div>
+<div>
   <table>
     <tr>
       <td><label for="todo-id">id: </label></td>
-      <td><input id="todo-id" [(ngModel)]="todo.id" placeholder="id"></td>
+      <td><input id="todo-id" [(ngModel)]="todo.id" placeholder="id" disabled></td>
     </tr>
     <tr>
       <td><label for="todo-task">Taak: </label></td>
@@ -44,10 +46,6 @@
       </td>
     </tr>
     <tr>
-      <td><label for="todo-owner">Eigenaar: </label></td>
-      <td><input id="todo-owner" [(ngModel)]="todo.owner" placeholder="owner"></td>
-    </tr>
-    <tr>
       <td><label for="todo-locationxy">Locatie X/Y: </label></td>
       <td><input id="todo-locationxy" [(ngModel)]="todo.locationxy" placeholder="locationxy"></td>
     </tr>
@@ -72,6 +70,15 @@
     <tr>
       <td><label for="todo-description">Omschrijving: </label></td>
       <td><input id="todo-description" [(ngModel)]="todo.description" placeholder="description"></td>
+    </tr>
+    <tr>
+    <td><label for="todo-user">Owner/User: </label></td>
+    <td>
+      <select [(ngModel)]="todo.user.id" id="todo-user" name="user" placeholder="user">
+        <option value=""></option>
+        <option *ngFor="let user of usersList" [ngValue]="user.id" >{{user.username}}</option>
+      </select>
+    </td>
     </tr>
     <tr>
       <td></td>
